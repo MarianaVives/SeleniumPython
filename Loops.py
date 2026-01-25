@@ -38,3 +38,18 @@ for o in range(0,10):
         uneven.append(o);
 print("Even: "+ str(even));
 print("Uneven: " + str(uneven));
+
+
+# If/elif/else
+user = 16;
+
+if user <= 11 and user >= 5:
+    print("Good Morning");
+elif user >= 12 and user <= 17:
+    print("Good Afternoon");
+elif user >= 18 and user <= 21:
+    print("Good Evening");
+else:
+    print("Good Night");
+
+print("Greeting code has completed");
