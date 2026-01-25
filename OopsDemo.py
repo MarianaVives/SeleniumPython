@@ -20,7 +20,10 @@ class Calculator:
     def multiply(self):
         return self.firstnumber * self.secondnumber;
     def divide(self):
-        return(self.firstnumber / self.secondnumber);
+        if self.secondNumber != 0:
+            return self.firstNumber / self.secondNumber
+        else:
+            return "Division by zero is not allowed."
     def sumTimes100(self):
         #return(self.firstnumber + self.secondnumber * Calculator.num); this is also an option
         return((self.firstnumber + self.secondnumber) * self.num); #constructor will also read from variables of the class
