@@ -14,10 +14,5 @@ def test_myMethod2():
     b=6;
     assert a+2==b; #Shoud pass
 
-#define a fixture
-@pytest.fixture()
-def setup():
-    print("I will be running first");
-
 def test_fixtureDemo(setup):
     print("I will be running after the fixture");
