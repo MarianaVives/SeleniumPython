@@ -29,3 +29,8 @@ def browserInstance(request):
     yield driver;
     #will run after test execution
     driver.close();
+
+@pytest.fixture(params=[("rahulshettyacademy", "Learning@830$3mK2")])
+def loginFixture(request):
+    print("Initializing Login Page sending username and password in request param in the fixture");
+    return request.param;

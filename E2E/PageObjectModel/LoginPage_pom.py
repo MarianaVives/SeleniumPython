@@ -1,0 +1,26 @@
+import pytest
+from selenium.webdriver.common.by import By
+
+from E2E.PageObjectModel.ShopPage_pom import ShopPage
+from PythonSelenium.Locators import password
+
+@pytest.mark.usefixtures("loginFixture")
+class Loginpage:
+
+    def __init__(self, driver):
+        self.driver = driver
+        self.username_input = (By.CSS_SELECTOR, "#username");
+        self.password_input = (By.NAME, "password");
+        self.signIn_button = (By.CSS_SELECTOR, "#signInBtn");
+
+    def navigate_to_login_page(self, url):
+        self.driver.get(url);
+        self.driver.maximize_window();
+        print("Title: " + self.driver.title);
+        print("URL: " + self.driver.current_url);
+
+    def login(self, loginFixture):
+        #star breaks elements into two. the selector and by come in a tuple form, star sparates by and locator into twwo arguments
+        self.driver.find_element(*self.username_input).send_keys(loginFixture[0]);
+        self.driver.find_element(*self.password_input).send_keys(loginFixture[1]);
+        self.driver.find_element(*self.signIn_button).click();
