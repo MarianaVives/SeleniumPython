@@ -2,9 +2,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
+from E2E.util.BrowserUtils import BrowserUtils
 
-class Checkoutpage:
+
+class Checkoutpage(BrowserUtils):
     def __init__(self, driver,country_initials, country_name):
+        super().__init__(driver)
         self.driver = driver;
         self.country_initials = country_initials;
         self.country_name = country_name;

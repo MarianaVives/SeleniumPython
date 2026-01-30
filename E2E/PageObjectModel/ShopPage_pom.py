@@ -3,10 +3,12 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 from E2E.PageObjectModel.CheckoutPage_pom import Checkoutpage
+from E2E.util.BrowserUtils import BrowserUtils
 
 
-class ShopPage:
+class ShopPage(BrowserUtils):
     def __init__(self, driver):
+        super().__init__(driver)
         self.driver = driver;
         self.shop_link = (By.XPATH, "//a[contains(@href,'shop')]")
         self.product_cards = (By.XPATH, "//div[@class='card h-100']");
