@@ -19,8 +19,8 @@ class Loginpage:
         print("Title: " + self.driver.title);
         print("URL: " + self.driver.current_url);
 
-    def login(self, loginFixture):
+    def login(self, username, password):
         #star breaks elements into two. the selector and by come in a tuple form, star sparates by and locator into twwo arguments
-        self.driver.find_element(*self.username_input).send_keys(loginFixture[0]);
-        self.driver.find_element(*self.password_input).send_keys(loginFixture[1]);
+        self.driver.find_element(*self.username_input).send_keys(username);
+        self.driver.find_element(*self.password_input).send_keys(password);
         self.driver.find_element(*self.signIn_button).click();

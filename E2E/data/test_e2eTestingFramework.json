@@ -1,0 +1,20 @@
+{
+    "data" : [
+      {
+        "url": "https://rahulshettyacademy.com/loginpagePractise/",
+        "username": "rahulshettyacademy",
+        "password": "Learning@830$3mK2",
+        "product_name": "Blackberry",
+        "country": "united",
+        "country_name": "United Kingdom"
+      },
+      {
+        "url": "https://rahulshettyacademy.com/loginpagePractise/",
+        "username": "rahulshettyacademy",
+        "password": "Learning@830$3mK2",
+        "product_name": "Samsung Note 8",
+        "country": "united",
+        "country_name": "United States of America"
+      }
+    ]
+}
